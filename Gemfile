@@ -7,6 +7,8 @@ end
 # add after giving jqery error
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 gem 'rails-ujs', '~> 0.1.0'
+#
+gem 'simple_form', '~> 4.1'
 #for embed rail in html file its like a shorthand notation alternative of erb
 gem 'haml', '~> 5.0.0.beta.2'
 # to add bootstrap for frontend
