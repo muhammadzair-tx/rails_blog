@@ -2,12 +2,24 @@ class PostsController < ApplicationController
     def index
     end
     
+    def show
+        @post = Post.find(params[:id])
+    end
     def new
         @post = Post.new
     end
 
+    def edit
+        @post = Post.find(params[:id])
+    end
+    
+    def update
+        @post = Post.find(params[:id])
+        if @post.update(post_params)
+    end
+
     def create
-        @post = Post.new(post_params)
+        @post = Post.new(post_params)#mass assignment
         if @post.save
             redirect_to @post
         else
@@ -17,8 +29,7 @@ class PostsController < ApplicationController
     end
 private
     def post_params
-        # it will prevent user from any Malicious activity 
-        # need to more dig in for now its just like php security functions
         params.require(:post).permit(:title,:body)
+        #white listing strong parameter
     end
 end

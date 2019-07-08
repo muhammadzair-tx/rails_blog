@@ -17,3 +17,12 @@ to migrate
 if you do something wrong or make a mistake you run this command below
 #rails db:rollback 
 
+add simple_form in gem
+#bundle install
+then 
+#rails generate simple_form:install --bootstrap
+after that copy 
+= simple_form_for(@user, html: { class: 'form-inline' }) do |form|
+this line and add into your from file simple
+
+
