@@ -1,0 +1,19 @@
+**best practice before adding any gem make a git 
+rails 
+
+git
+
+create a controller 
+
+create
+
+after 12 min 
+
+#rails g model Post title:string body:text
+it will create a migrate file in db/migrate folder
+to migrate 
+#rails db:migrate
+
+if you do something wrong or make a mistake you run this command below
+#rails db:rollback 
+

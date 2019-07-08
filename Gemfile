@@ -4,8 +4,13 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
-
-
+# add after giving jqery error
+gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
+gem 'rails-ujs', '~> 0.1.0'
+#for embed rail in html file its like a shorthand notation alternative of erb
+gem 'haml', '~> 5.0.0.beta.2'
+# to add bootstrap for frontend
+gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.7'
 # Use sqlite3 as the database for Active Record
