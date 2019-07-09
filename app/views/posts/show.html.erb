@@ -1,0 +1,36 @@
+<% content_for :page_title, "Create a New Post" %>
+<br>
+<div class="container">
+        <div class="row">
+        <div class="col-md-12">
+            <div class="thumbnail">
+            
+            <div class="caption">
+                <h2><%= @post.title %></h2>
+                <hr class="hr-success">
+                <p>
+                <%= @post.body %>
+                </p>
+                <br>
+                <p>
+                <%= link_to "Edit", edit_post_path(@post),class:"btn btn-primary"%>
+                <a href="#" class="btn btn-danger pull-right" role="button">Delete</a>
+                </p>
+            </div>
+            </div>
+        </div>
+        </div>
+        </div>
+</div>
+
+
+<%# <div class="container">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h1 class="panel-title"> <%= @post.title % </h1>
+    </div>
+    <div class="panel-body">
+        <%= @post.body >
+    </div>
+    </div>
+%>

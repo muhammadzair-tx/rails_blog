@@ -1,0 +1,9 @@
+<% content_for :page_title, "Index" %>
+<br> 
+    <div class="container">
+        <% @posts.each do |post| %>
+            <div class="alert alert-warning">
+                <strong><%= link_to post.title, post %></strong>
+            </div>
+        <% end %>
+    </div>

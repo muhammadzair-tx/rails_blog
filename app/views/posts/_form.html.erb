@@ -1,0 +1,16 @@
+<div class="container">
+<%= simple_form_for @post  do |f| %>
+    <div class="form-group">
+        <%# <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email"> %>
+        <%= f.input :title, placeholder: 'Title of Your Blog here', input_html: { class: 'form-control' } ,lable_html: { class: 'label' } %>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Body</label>
+        <%# <%= f.text_area :body, :rows => 10, style: 'width:100%;' %> 
+        <%= f.input :body, input_html:  {class: 'textarea', rows: 7 },placeholder: 'Content of Your Blog Here', label_html: {class: 'label'} %>
+    </div>
+    <br>
+    <br>
+        <%= f.button :submit, class: 'button is-primary' %>
+    </div>
+<% end %>

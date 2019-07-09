@@ -9,6 +9,8 @@ create
 
 after 12 min 
 
+#rake routes 
+show the all routes
 #rails g model Post title:string body:text
 it will create a migrate file in db/migrate folder
 to migrate 

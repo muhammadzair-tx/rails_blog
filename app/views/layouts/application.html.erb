@@ -3,12 +3,21 @@
   <head>
     <title>Blog</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <div class="jumbotron" style="background-color:#87ffa8;">
+      <%= link_to "<span class='glyphicon glyphicon-plus'></span>Create".html_safe, render_as_button: true,html: { class: 'btn btn-success' } %>
+      <%# <button type="button" class="btn btn-success btn-xs">
+        <span class="glyphicon glyphicon-plus"></span>
+          Create Post
+      </button> %>
+      <h1 class="text-center"><%= yield :page_title%></h1>
+    </div>
+    
+
     <%= yield %>
   </body>
 </html>
