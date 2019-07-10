@@ -6,9 +6,13 @@ Rails.application.routes.draw do
   # then it gives a error for nothing to return not test or view 
   # create a view by the help of haml or erb 
   # haml is just a shorthand notation "index.html.haml"
+  resources :posts do
+    resources :comments #nested thing
+  end
+  
   root "posts#index"
   
   # this will create a crud function for post
   # you can check "rails routes" after or before it 
-  resources :posts
+  
 end
