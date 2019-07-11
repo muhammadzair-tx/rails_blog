@@ -18,6 +18,8 @@ class PostsController < ApplicationController
        
         @post = Post.find(params[:id])
         if @post.update(post_params)
+            # It is not necessary to pass all the attributes to update. For example, if @article.update(title: 'A new title') was called, 
+            # Rails would only update the title attribute, leaving all other attributes untouched.
             redirect_to @post
         else
             render "edit"
@@ -31,6 +33,10 @@ class PostsController < ApplicationController
         else
             # return or render the view 
             render "new"
+            # Notice that inside the create action we use render instead of redirect_to when save returns false.
+            # The render method is used so that the @article object is passed back to the new template when it is rendered.
+            # This rendering is done within the same request as the form submission, 
+            # whereas the redirect_to will tell the browser to issue another request.
         end
     end
 
@@ -44,6 +50,6 @@ class PostsController < ApplicationController
 private
     def post_params
         params.require(:post).permit(:title,:body)
-        #white listing strong parameter
+        #white listing called strong parameter
     end
 end

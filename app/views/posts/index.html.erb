@@ -2,8 +2,11 @@
 <br> 
     <div class="container">
         <% @posts.each do |post| %>
-            <div class="alert alert-warning">
-                <strong><%= link_to post.title, post %></strong>
+            <div class="panel panel-success">
+                <div class="panel-body">
+                    <strong class="mcolor"><%= link_to post.title, post %></strong>
+                </div>
+                <div class="panel-body"><%=h truncate(post.body, :length => 80) %></div>
             </div>
         <% end %>
     </div>
