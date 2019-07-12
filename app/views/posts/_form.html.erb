@@ -3,7 +3,7 @@
    
 
 <% if @post.errors.any? %>
-        <div id="error_explanation">
+    <div id="error_explanation">
     <div class="panel panel-danger">
             <div class="panel-heading"><strong><span class="glyphicon glyphicon-ban-circle"> </span> 
                 <%= pluralize(@post.errors.count, "error") %> </strong>
