@@ -19,7 +19,7 @@ class PostsController < ApplicationController
         @post = Post.find(params[:id])
         if @post.update(post_params)
             # It is not necessary to pass all the attributes to update. For example, if @article.update(title: 'A new title') was called, 
-            # Rails would only update the title attribute, leaving all other attributes untouched.
+            # Rails would only update the title attribute, leext install hridoy.rails-snippetsaving all other attributes untouched.
             redirect_to @post
         else
             render "edit"

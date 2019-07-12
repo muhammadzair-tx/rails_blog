@@ -9,6 +9,8 @@ gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 gem 'rails-ujs', '~> 0.1.0'
 # helping you with powerful components to create your forms
 gem 'simple_form', '~> 4.1'
+#Devise is a flexible authentication solution for Rails based on Warden, is Rack based.
+gem 'devise'
 #for embed rail in html file its like a shorthand notation alternative of erb
 gem 'haml', '~> 5.0.0.beta.2'
 # to add bootstrap for frontend
