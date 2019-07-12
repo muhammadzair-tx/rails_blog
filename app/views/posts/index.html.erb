@@ -2,11 +2,13 @@
 <br> 
     <div class="container">
         <% @posts.each do |post| %>
+        <%= link_to post_path(post) do %>
             <div class="panel panel-success">
                 <div class="panel-body">
-                    <strong class="mcolor"><%= link_to post.title, post %></strong>
+                    <strong class="mcolor"><%= post.title %></strong>
                 </div>
                 <div class="panel-body"><%=h truncate(post.body, :length => 80) %></div>
             </div>
+            <% end %>
         <% end %>
     </div>
