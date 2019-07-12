@@ -1,24 +1,26 @@
 <% content_for :page_title, "Show" %>
 <br>
 <div class="container">
-        <div class="row">
-        <div class="col-md-12">
-            <div class="thumbnail">
-            
-            <div class="caption">
-                <h2><%= @post.title %></h2>
-                <hr class="hr-success">
-                <p>
-                <%= @post.body %>
-                </p>
-                <br>
-                <p>
-                    <%= link_to "Edit", edit_post_path(@post),class:"btn btn-info btn-sm"%>
-                    <%= link_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you sure?" }, class:"btn btn-danger pull-right btn-sm" %>
-                </p>
+        <div class="panel-group">
+            <div class="panel panel-default">
+                 <div class="panel-heading">
+                    <%= @post.user.email %> 
+                    <strong class="pull-right"><%= @post.user.email %> </strong>
+                 </div> 
+                    <div class="panel-body">
+                        <h2><%= @post.title %></h2>
+                        <hr class="hr-success">
+                        <p>
+                        <%= @post.body %>
+                        </p>
+                        <br>
+                        <p>
+                            <%= link_to "Edit", edit_post_path(@post),class:"btn btn-info btn-sm"%>
+                            <%= link_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you sure?" }, class:"btn btn-danger pull-right btn-sm" %>
+                        </p>
+                    </div>
+                </div>
             </div>
-            </div>
-        </div>
         </div>
     
     <h4><strong><%= @post.comments.count %></strong> Comments</h4>
