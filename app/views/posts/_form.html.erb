@@ -12,7 +12,7 @@
                 prohibited
                 this Post from being saved:
             </div>
-            <div class="panel-body">
+            <div class="panel-body invalid-feedback">
             <ul>
                 <% @post.errors.full_messages.each do |msg| %>
                 <li><%= msg %></li>
