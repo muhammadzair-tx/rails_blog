@@ -42,3 +42,13 @@ a:hover {
 a:active {
     text-decoration:none;
 }
+
+.invalid-feedback{
+
+        color: #ab4846;      
+        border: 1px solid #bd9dbc;
+        border-left-width: 11px;
+        border-left-color: #ca9898;
+        padding: -2px;
+        margin: 8px;
+}
