@@ -12,4 +12,4 @@ default from: 'muhammadzair@techcreatix.com'
     mail(to: @user.email, subject: 'Welcome to RailsBlog first app')
   end
 end
-end
+
