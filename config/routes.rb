@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  Rails.application.routes.default_url_options[:host] = 'https://rails-zair-blog.herokuapp.com'
   # devise_for :users do
   #   member do
   #     get :confirm_email
