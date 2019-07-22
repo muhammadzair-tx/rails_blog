@@ -19,9 +19,9 @@
 # ])
 #-------------------------------------
 User.create!([
-  {email: "zair@blog.com", password: "password", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, confirmation_token: nil, confirmed_at: "2019-07-17 14:57:00", confirmation_sent_at: nil, isadmin: false},
-  {email: "user2@blog.com", password: "password", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, confirmation_token: nil, confirmed_at: "2019-07-17 14:57:00", confirmation_sent_at: nil, isadmin: false},
-  {email: "hello@gmail.com", password: "password", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, confirmation_token: "Tw1mh8mpsq-sSkM_h12x", confirmed_at: nil, confirmation_sent_at: "2019-07-19 07:46:48", isadmin: false},
+  # {email: "zair@blog.com", password: "password", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, confirmation_token: nil, confirmed_at: "2019-07-17 14:57:00", confirmation_sent_at: nil, isadmin: false},
+  # {email: "user2@blog.com", password: "password", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, confirmation_token: nil, confirmed_at: "2019-07-17 14:57:00", confirmation_sent_at: nil, isadmin: false},
+  # {email: "hello@gmail.com", password: "password", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, confirmation_token: "Tw1mh8mpsq-sSkM_h12x", confirmed_at: nil, confirmation_sent_at: "2019-07-19 07:46:48", isadmin: false},
   {email: "muhammadzair@techcreatix.com", password: "pass123", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, confirmation_token: "JHnu1gCpXkYr5p5yjgrC", confirmed_at: "2019-07-19 07:53:02", confirmation_sent_at: "2019-07-19 07:47:56", isadmin: true},
   {email: "hitachi.xoxoxo@gmail.com", password: "password", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, confirmation_token: "cS_8V2tztxq9NyFjBQu4", confirmed_at: "2019-07-19 12:48:27", confirmation_sent_at: "2019-07-19 12:47:20", isadmin: false},
   {email: "hello1@gmail.com", password: "password", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, confirmation_token: "ve4n5CzExbGk8SqpeikH", confirmed_at: nil, confirmation_sent_at: "2019-07-19 13:47:48", isadmin: false}

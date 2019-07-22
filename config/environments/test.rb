@@ -42,6 +42,4 @@ Rails.application.configure do
   #----------------------
   config.action_mailer.default_url_options = {:host => 'rails-zair-blog.herokuapp.com' }
   
-  config.action_mailer.default_url_options = 
-      { :host => 'rails-zair-blog.herokuapp.com' }
 end
