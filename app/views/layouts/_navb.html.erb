@@ -13,7 +13,12 @@
       <ul class="nav navbar-nav">
       <li class="active"><%= link_to "<span class='glyphicon glyphicon-home' style='color:#80eda8'></span> Home".html_safe, root_path(),render_as_button: true,html: { class: 'btn btn-success' } %></li>
         
-        <li><a href="#">Tab</a></li>
+        
+        <% if(user_signed_in? && current_user.isadmin) %>
+          <li><%= link_to "<span class='glyphicon glyphicon-list-alt' style='color:#80eda8'></span> All Users".html_safe, users_path(),render_as_button: true,html: { class: 'btn btn-success' } %></li>
+        <% else %>
+          <li><a href="#">Tab</a></li>
+        <% end %>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <% if(user_signed_in?) %>

@@ -1,0 +1,42 @@
+
+<% content_for :page_title, "All Users" %>
+<br> 
+    <div class="container">
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">          
+<%= link_to 'Back', :back,class: 'btn btn-default border-main' %>
+<br /><br />
+  <table class="table table-hover">
+    <thead class="mcolor">
+      <tr>
+        <th>ID</th>
+        <th>E-mail</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @users.each do |user| %>
+        <tr>
+            <td><strong><%= user.id %></strong></td>
+            <td><strong><%= user.email %></strong></td>
+            <td><%= link_to "Delete", user_registration_path(user), method: :delete, data: { confirm: "Are you sure?" }, class:"btn btn-danger btn-sm" %></td> 
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
+
+
+</body>
+</html>

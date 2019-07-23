@@ -59,7 +59,7 @@ private
         @post = Post.find(params[:id])
     end
     def is_owner
-        unless current_user == @post.user
+        unless(current_user == @post.user || current_user.isadmin)
             redirect_to @post
         end
     end
