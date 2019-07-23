@@ -2,6 +2,7 @@
 <br> 
     <div class="container">
         <% @posts.each do |post| %>
+        <div class="cap">
         <%= link_to post_path(post) do %>
             <div class="panel panel-success">
                 <div class="panel-body">
@@ -12,5 +13,6 @@
                 <div class="panel-body"><%=h truncate(post.body, :length => 80) %></div>
             </div>
             <% end %>
+            </div>
         <% end %>
     </div>

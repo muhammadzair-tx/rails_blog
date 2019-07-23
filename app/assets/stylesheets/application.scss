@@ -53,3 +53,8 @@ a:active {
         padding: -2px;
         margin: 8px;
 }
+
+.cap .panel:hover {
+    border-color: #28a745;
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
