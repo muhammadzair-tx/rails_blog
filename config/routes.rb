@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   #   end
   # end
   get '/users',   to: 'users#index'
+  get '/search' => 'pages#search', :as => 'search_page'
+  # get '/search', to: 'pages#search'
 
   devise_for :users, controllers: { confirmations: 'confirmations' }
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

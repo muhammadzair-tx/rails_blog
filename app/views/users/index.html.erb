@@ -21,6 +21,7 @@
     <thead class="mcolor">
       <tr>
         <th>ID</th>
+        <th>User Name</th>
         <th>E-mail</th>
         <th>Delete</th>
       </tr>
@@ -29,6 +30,7 @@
     <% @users.each do |user| %>
         <tr>
             <td><strong><%= user.id %></strong></td>
+            <td><strong><%= user.username %></strong></td>
             <td><strong><%= user.email %></strong></td>
             <td><%= link_to "Delete", user_registration_path(user), method: :delete, data: { confirm: "Are you sure?" }, class:"btn btn-danger btn-sm" %></td> 
         </tr>

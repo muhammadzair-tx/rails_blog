@@ -1,6 +1,6 @@
 # User.create!([
-#   {email: "zair@blog.com", password: "$2a$11$fzT19fXpoocn./M11rzEfefyJqaEZ0eFPHhzt6Vu2lC/WNUHBZ.y2", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil},
-#   {email: "user2@blog.com", password: "$2a$11$KP2/fDfKC.lzI08TdkVq.uU6NuWWBiUDzwOZ9GX8tZL7fecHjOKya", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil}
+#   {username: "zair" email: "zair@blog.com", password: "$2a$11$fzT19fXpoocn./M11rzEfefyJqaEZ0eFPHhzt6Vu2lC/WNUHBZ.y2", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil},
+#   {username: "user2" email: "user2@blog.com", password: "$2a$11$KP2/fDfKC.lzI08TdkVq.uU6NuWWBiUDzwOZ9GX8tZL7fecHjOKya", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil}
 # ])
 # Comment.create!([
 #   {name: "DaveDev", message: "Personally, I like the ruby because of its robustness and flexibility.", post_id: 17},
