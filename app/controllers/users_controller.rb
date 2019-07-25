@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
 #POST /users
 # POST /users.json
-before_action :is_admin, only: [:index,:show]
+before_action :is_admin, only: [:index]
+#before_filter :authenticate_admin!, :except => [:index, :show] # either you can do it
 def create
   @user = User.new(params[:user])
 
@@ -23,7 +24,7 @@ def index
   @users = User.all.order("created_at DESC")
 end
 def show
-  @user = User.find_by_username(params[:id])
+  @user = User.find(params[:id])
 end
 
 def destroy

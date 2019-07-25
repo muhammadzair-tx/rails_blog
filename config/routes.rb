@@ -5,11 +5,18 @@ Rails.application.routes.draw do
   #     get :confirm_email
   #   end
   # end
-  get '/users',   to: 'users#index'
+  # This will render the show.html.erb page when 'users/username' is typed in the browser
+  # Now your users can be seen at /users/username
+  # devise_for :users, :path_prefix => 'd'
+  # resources :users, :only =>[:show]
+
+  get '/users', to: 'users#index'
+  get '/user/:id', to: 'users#show', :as => 'user_profile'
   get '/search' => 'pages#search', :as => 'search_page'
   # get '/search', to: 'pages#search'
 
-  devise_for :users, controllers: { confirmations: 'confirmations' }
+  devise_for :users
+  #, controllers: { confirmations: 'confirmations' }
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   
   # here posts is controller and index is a function

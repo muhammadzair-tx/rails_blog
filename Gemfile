@@ -11,6 +11,8 @@ gem 'rails-ujs', '~> 0.1.0'
 gem 'simple_form', '~> 4.1'
 #Devise is a flexible authentication solution for Rails based on Warden, is Rack based.
 gem 'devise'
+#Automatically extract and apply validation rules defined on the server to the client.
+gem 'client_side_validations'
 #Dump (parts) of your database to db/seeds.rb to get a headstart creating a meaningful seeds.rb file
 gem 'seed_dump', '~> 3.3', '>= 3.3.1'
 #for embed rail in html file its like a shorthand notation alternative of erb
