@@ -7,8 +7,9 @@
             <div class="panel panel-success">
                 <div class="panel-body">
                     <strong class="mcolor"><%= post.title %></strong>
-                    <span class="pull-right"><%= post.user.email %></span>
-                    <%#><strong class="mcolor"><%= link_to post.title, post %>
+                    <span class="pull-right"><%= post.user.email %> | </span>
+                  <span class="glyphicon glyphicon-thumbs-up pull-right"> <%= "#{post.likes.count} | - " %> <%# (post.likes.count) == 1 ? 'Like' : 'Likes'%></span>
+                  <%#><strong class="mcolor"><%= link_to post.title, post %>
                 </div>
                 <div class="panel-body"><%=h truncate(post.body, :length => 160) %></div>
             </div>

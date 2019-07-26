@@ -12,6 +12,12 @@ Rails.application.routes.draw do
 
   get '/users', to: 'users#index'
   get '/user/:id', to: 'users#show', :as => 'user_profile'
+  # resources :users do
+  #   member do
+  #     get :following, :followers
+  #   end
+  # end
+  resources :relationships,       only: [:create, :destroy]
   get '/search' => 'pages#search', :as => 'search_page'
   # get '/search', to: 'pages#search'
 
@@ -26,6 +32,7 @@ Rails.application.routes.draw do
   # haml is just a shorthand notation "index.html.haml"
   resources :posts do
     resources :comments #nested thing
+    resources :likes
   end
   
   root "posts#index"
