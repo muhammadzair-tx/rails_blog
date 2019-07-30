@@ -12,9 +12,15 @@
 //
 //= require rails-ujs
 //= require turbolinks
-//= require_tree .
 
 //= require jquery
 //= require jquery_ujs
+
+
+
 //= require bootstrap
-//= require_tree .
+// require_tree .
+
+//= require rails.validations
+//= require rails.validations.simple_form
+//--------------------------------------------

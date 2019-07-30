@@ -11,35 +11,41 @@ class PostsController < ApplicationController
     end
     def new
         @post = Post.new
+        @categories = Category.all.map { |cat| [cat.name, cat.id] }
+    end
+
+    def create
+        @post = current_user.posts.build(post_params)#mass assignment
+        @post.category_id = params[:category_id]
+        if @post.save
+            redirect_to @post , notice: 'Post was successfully Created.'
+        else
+            # return or render the view
+            @categories = Category.all.map { |cat| [cat.name, cat.id] }
+            render "new"
+            # Notice that inside the create action we use render instead of redirect_to when save returns false.
+            # The render method is used so that the @article object is passed back to the new template when it is rendered.
+            # This rendering is done within the same request as the form submission,
+            # whereas the redirect_to will tell the browser to issue another request.
+        end
     end
 
     def edit
         @post = Post.find(params[:id])
+        @categories = Category.all.map { |cat| [cat.name, cat.id] }
     end
     
     def update
        
         @post = Post.find(params[:id])
+        @post.category_id = params[:category_id]
         if @post.update(post_params)
             # It is not necessary to pass all the attributes to update. For example, if @article.update(title: 'A new title') was called, 
             # Rails would only update the title attribute, leext install hridoy.rails-snippetsaving all other attributes untouched.
             redirect_to @post , notice: 'Post was successfully Updated.'
         else
+            @categories = Category.all.map { |cat| [cat.name, cat.id] }
             render "edit"
-        end
-    end
-
-    def create
-        @post = current_user.posts.build(post_params)#mass assignment
-        if @post.save
-            redirect_to @post , notice: 'Post was successfully Created.'
-        else
-            # return or render the view 
-            render "new"
-            # Notice that inside the create action we use render instead of redirect_to when save returns false.
-            # The render method is used so that the @article object is passed back to the new template when it is rendered.
-            # This rendering is done within the same request as the form submission, 
-            # whereas the redirect_to will tell the browser to issue another request.
         end
     end
 
@@ -52,7 +58,7 @@ class PostsController < ApplicationController
 
 private
     def post_params
-        params.require(:post).permit(:title,:body,:user_id)
+        params.require(:post).permit(:title,:body,:user_id,:category_id)
         #white listing called strong parameter
     end
     def find_post

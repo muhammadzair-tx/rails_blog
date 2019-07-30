@@ -37,7 +37,7 @@
       <td>
         <a href="<%# following_user_path(@user) %>#">
           <strong id="following" class="stat">
-            <%= @user.following.count %>
+            <%= @user.followees.count %>
           </strong>
           following
         </a>
@@ -50,6 +50,15 @@
           followers
         </a>
       </td>
+    </tr>
+    <tr>
+    <td>
+      <%= link_to 'Back', :root,class: 'btn btn-default btn-sm border-main' %>
+    </td>
+      <td></td>
+    <td>
+      <%= link_to "Edit", edit_user_registration_path() ,class: 'btn btn-warning btn-sm'  %>
+    </td>
     </tr>
   </tbody>
 </table>

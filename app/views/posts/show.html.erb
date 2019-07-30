@@ -4,11 +4,11 @@
         <div class="panel-group">
             <div class="panel panel-default">
                  <div class="panel-heading">
-                    <%= link_to 'Back', :back,class: 'btn btn-default btn-sm border-main' %>
+                    <%= link_to 'Back', :root,class: 'btn btn-default btn-sm border-main' %>
                     <strong class="pull-right"><%= @post.user.email %> </strong>
                  </div> 
                     <div class="panel-body">
-                        <h2><%= @post.title %></h2>
+                        <h2><%= @post.title %><small class="pull-right">Category - <strong><%= @post.category.name %></strong></small></h2>
                         <hr class="hr-success">
                         <p>
                         <%= @post.body %>
