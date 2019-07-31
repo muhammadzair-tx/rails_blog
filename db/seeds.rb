@@ -43,3 +43,5 @@ Relationship.create!([
   {follower_id: 2, user_id: 10},
   {follower_id: 10, user_id: 1}
 ])
+#rake db:seed:dump APPEND=true
+#rake db:seed:dump MODELS=User
