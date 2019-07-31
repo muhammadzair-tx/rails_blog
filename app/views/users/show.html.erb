@@ -37,17 +37,15 @@
       <td>
         <a href="<%# following_user_path(@user) %>#">
           <strong id="following" class="stat">
-            <%= @user.followees.count %>
+            <%= pluralize(Relationship.where("follower_id = ?", @user).count, 'Following') %>
           </strong>
-          following
         </a>
       </td>
       <td>
         <a href="#<%# followers_user_path(@user) %>">
-          <strong id="followers" class="stat">
-            <%= @user.followers.count %>
+          <strong id="follower" class="stat">
+            <%= pluralize(@user.followers.count, 'Follower') %>
           </strong>
-          followers
         </a>
       </td>
     </tr>

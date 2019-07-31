@@ -5,7 +5,15 @@
             <div class="panel panel-default">
                  <div class="panel-heading">
                     <%= link_to 'Back', :root,class: 'btn btn-default btn-sm border-main' %>
-                    <strong class="pull-right"><%= @post.user.email %> </strong>
+                    <strong class="pull-right"><%= "#{@post.user.username} | #{@post.user.email}" %> </strong>
+                   <!--      ----------------------------------------------------------------     follower button              --->
+                   <%# pre_follower = @user.followers.find { |follower| follower.follower_id == current_user.id} %>
+                   <%# if pre_follower %>
+                     <%#= button_to 'Follow', relationship_path(@post, pre_prefollower), method: :delete ,class:"btn btn-warning btn-sm pull-right"%>
+                   <%# else %>
+                     <%#= button_to 'Unfollow', relationships_path(@post), method: :post ,class:"btn btn-primary btn-sm pull-right"%>
+                   <%# end %>
+                   <!--      ----------------------------------------------------------------                    --->
                  </div> 
                     <div class="panel-body">
                         <h2><%= @post.title %><small class="pull-right">Category - <strong><%= @post.category.name %></strong></small></h2>
@@ -14,21 +22,22 @@
                         <%= @post.body %>
                         </p>
                         <br>
-                        <span><%= @post.likes.count %> <%= (@post.likes.count) == 1 ? 'Like' : 'Likes'%></span>
+                        <span><%= @post.likes.count %> <%= (@post.likes.count) == 1 ? 'Like' : 'Likes' %></span>
                         <% if current_user.present? %>
 
-                        <% pre_like = @post.likes.find { |like| like.user_id == current_user.id} %>
-                        <% if pre_like %>
-                          <%= button_to 'Unlike', post_like_path(@post, pre_like), method: :delete ,class:"btn btn-warning btn-sm"%>
-                        <% else %>
-                          <%= button_to 'Like', post_likes_path(@post), method: :post ,class:"btn btn-primary btn-sm"%>
+                          <% pre_like = @post.likes.find { |like| like.user_id == current_user.id} %>
+                          <% if pre_like %>
+                            <%= button_to 'Unlike', post_like_path(@post, pre_like), method: :delete ,class:"btn btn-warning btn-sm"%>
+                          <% else %>
+                            <%= button_to 'Like', post_likes_path(@post), method: :post ,class:"btn btn-primary btn-sm"%>
                         <% end %>
-                        <% if(current_user == @post.user || current_user.isadmin) %><br>
-                        <p>
-                            <%= link_to "Edit", edit_post_path(@post),class:"btn btn-info btn-sm"%>
-                            <%= link_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you sure?" }, class:"btn btn-danger pull-right btn-sm" %>
-                        </p>
-                        <% end %>
+
+                          <% if(current_user == @post.user || current_user.isadmin) %><br>
+                            <p>
+                                <%= link_to "Edit", edit_post_path(@post),class:"btn btn-info btn-sm" %>
+                                <%= link_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you sure?" }, class:"btn btn-danger pull-right btn-sm" %>
+                            </p>
+                          <% end %>
                         <% end %>
                     </div>
                 </div>
