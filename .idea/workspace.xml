@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="18b6b05b-d179-488e-a85b-951598361c29" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -186,7 +187,7 @@
       <workItem from="1563780287227" duration="3322000" />
       <workItem from="1563953617810" duration="26454000" />
       <workItem from="1564051801014" duration="54211000" />
-      <workItem from="1564470580180" duration="37260000" />
+      <workItem from="1564470580180" duration="39612000" />
     </task>
     <servers />
   </component>
