@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="18b6b05b-d179-488e-a85b-951598361c29" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/environments/development.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/development.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/environments/production.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/production.rb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -65,7 +66,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Rails.Development: blog">
+  <component name="RunManager" selected="Rails.Production: blog">
     <configuration name="Development: blog" type="RailsRunConfigurationType" factoryName="Rails">
       <module name="blog" />
       <predefined_log_file enabled="true" id="RUBY_RAILS_SERVER" />
@@ -183,7 +184,7 @@
       <workItem from="1563953617810" duration="26454000" />
       <workItem from="1564051801014" duration="54211000" />
       <workItem from="1564470580180" duration="47151000" />
-      <workItem from="1564651158896" duration="5522000" />
+      <workItem from="1564651158896" duration="6755000" />
     </task>
     <servers />
   </component>
