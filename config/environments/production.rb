@@ -88,28 +88,27 @@
 #   end
 #
 #   # Do not dump schema after migrations.
-#   config.active_record.dump_schema_after_migration = false
+#   # config.active_record.dump_schema_after_migration = false #<=====================
 #   #------------------------------------------
-#   config.action_mailer.default_url_options = {:host => 'rails-zair-blog.herokuapp.com' }
-#
 #   config.action_mailer.delivery_method = :smtp
+#   config.action_mailer.default_url_options = {:host => 'rails-zair-blog.herokuapp.com' }
 #   # config.action_mailer.smtp_settings = {:address => "localhost", :port => 1025}
 #
 #   # change to false to prevent email from being sent during development
-#   config.action_mailer.delivery_method = :smtp
+#
 #   config.action_mailer.perform_deliveries = true
 #   config.action_mailer.raise_delivery_errors = true
 #   config.action_mailer.default :charset => "utf-8"
 #   config.action_mailer.smtp_settings = {
 #   :address => "smtp.gmail.com",
 #   :port => 587,
-#   :domain => 'gmail.com',
+#   :domain => 'localhost:3000',
 #   user_name: "hitachi.xoxoxo@gmail.com",
 #   password: "123QWE!@#",
 #   :authentication => :plain,
 #   :enable_starttls_auto => true}
 # end
-
+#-----------------------
 #--------------------------
 #Gayur
 #
@@ -138,7 +137,7 @@ Rails.application.configure do
   # config.assets.css_compressor = :sass
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false
-  config.active_storage.service = :local
+  # config.active_storage.service = :local #<====================
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.action_controller.asset_host = 'http://assets.example.com'
