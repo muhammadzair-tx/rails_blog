@@ -57,6 +57,7 @@ Rails.application.configure do
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
 
+
   # Use a real queuing backend for Active Job (and separate queues per environment)
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "blog_#{Rails.env}"
@@ -102,9 +103,9 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
   :address => "smtp.gmail.com",
   :port => 587,
-  :domain => 'herokuapp.com',
+  :domain => 'gmail.com',
   user_name: "hitachi.xoxoxo@gmail.com",
   password: "123QWE!@#",
-  :authentication => :login,
+  :authentication => :plain,
   :enable_starttls_auto => true}
 end
