@@ -35,8 +35,14 @@ def destroy
 end
 
 def is_admin
-  unless current_user.isadmin
-      redirect_to :controller => 'posts', :action => 'index'
-  end
+  if(user_signed_in?)
+    unless current_user.isadmin
+        redirect_to :controller => 'posts', :action => 'index'
+    end
+  else
+    redirect_to root_path
+    end
 end
+
+
 end
