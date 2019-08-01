@@ -4,6 +4,11 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
+gem 'jquery-turbolinks'
+gem 'codemirror-rails'
+gem "font-awesome-rails", "~> 4.3"
+#the Super Simple WYSIWYG Editor on Bootstrap
+gem 'summernote-rails'
 # add after giving jqery error user_controller and user_mailer
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 gem 'rails-ujs', '~> 0.1.0'

@@ -33,7 +33,7 @@
     </div>
     <div class="form-group">
         <%# <%= f.text_area :body, :rows => 10, style: 'width:100%;' %>
-        <%= f.input :body, input_html:  {class: 'textarea', rows: 7 },placeholder: 'Content of Your Blog Here' %>
+        <%= f.input :body, as: :summernote, input_html:  {class: 'textarea', rows: 7 },placeholder: 'Content of Your Blog Here' %>
     </div>
     <br>
     <br>

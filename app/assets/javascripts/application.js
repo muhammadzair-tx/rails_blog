@@ -16,11 +16,21 @@
 //= require jquery
 //= require jquery_ujs
 
-
-
+// require popper
 //= require bootstrap
-// require_tree .
+//= require summernote/summernote-bs4.min
+//= require summernote-init
+// require activestorage
+
+
 
 //= require rails.validations
 //= require rails.validations.simple_form
+
+//= require turbolinks
+//= require_tree .
 //--------------------------------------------
+
+$('[data-provider="summernote"]').each(function(){
+    $(this).summernote({ });
+})

@@ -13,6 +13,6 @@ class Post < ApplicationRecord #and ApplicationRecord is inherit from ActiveReco
 
     validates :body, 
             presence: true,
-            length: { minimum: 10, maximum: 9999 } , if: :body_changed?
+            length: { minimum: 10 } , if: :body_changed?
 
 end

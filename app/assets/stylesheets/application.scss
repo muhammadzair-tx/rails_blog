@@ -19,6 +19,13 @@
  @import "comments";
  @import "nav"; 
  @import "sign";
+@import "summernote";
+
+@import "bootstrap";
+@import "codemirror";
+@import "codemirror/themes/solarized";
+@import "codemirror";
+@import "codemirror/themes/solarized";
  
 .form-control:focus {
     border-color: #28a745;
