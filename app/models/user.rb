@@ -1,7 +1,10 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  validates_uniqueness_of :username, :email
+
+  # mount_uploader :avatar, AvatarUploader
+
+  validates_uniqueness_of :username, :email , if: :title_changed?
   validates_confirmation_of :password
   has_many :posts
   has_many :likes, dependent: :destroy

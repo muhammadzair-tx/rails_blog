@@ -4,11 +4,22 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
+#for pagination  https://teratail.com/questions/63813
+gem 'will_paginate', '~> 3.1', '>= 3.1.6'
+gem 'will_paginate-bootstrap'
 gem 'jquery-turbolinks'
 gem 'codemirror-rails'
 gem "font-awesome-rails", "~> 4.3"
+# jqurery file  Add Chosen jQuery library for multiple select and autocompletion
+
+gem 'rails-assets-tether', '~> 1.1', '>= 1.1.1'
+gem 'chosen-rails', '~> 1.5', '>= 1.5.2'
 #the Super Simple WYSIWYG Editor on Bootstrap
 gem 'summernote-rails'
+# A ruby wrapper for ImageMagick or GraphicsMagick command line. for thumbnails
+gem "mini_magick"
+#This gem provides a simple and extremely flexible way to upload files from Ruby applications. It works well with Rack based web applications,
+gem 'carrierwave', '>= 2.0.0.rc', '< 3.0'
 # add after giving jqery error user_controller and user_mailer
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 gem 'rails-ujs', '~> 0.1.0'
