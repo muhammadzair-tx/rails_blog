@@ -11,6 +11,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
          :confirmable
+  #https://accounts.google.com/DisplayUnlockCaptcha this is the solution for allow server to access this email
   #------------------------------------------------------------------------------------------------
   # has_many :active_relationships,  class_name:  "Relationship",
   #          foreign_key: "follower_id",
