@@ -31,7 +31,7 @@
     </tr>
     <tr>
       <td><strong>Created At :</strong></td>
-      <td><strong><%= @user.created_at %></strong></td>
+      <td><strong><%= @user.created_at.strftime("%d/%m/%Y at %I:%M%p") %></strong></td>
     </tr>
     <tr>
       <td>
@@ -51,9 +51,9 @@
     </tr>
     <tr>
     <td>
-      <%= link_to 'Back', :root,class: 'btn btn-default btn-sm border-main' %>
+      <%= link_to 'Back', :back,class: 'btn btn-default btn-sm border-main' %>
     </td>
-      <td> <%= render 'follow_form' %></td>
+      <td> <%= render 'users/follow_form' %></td>
     <td>
       <%= link_to "Edit", edit_user_registration_path() ,class: 'btn btn-warning btn-sm'  %>
     </td>

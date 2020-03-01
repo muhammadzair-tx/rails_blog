@@ -10,17 +10,17 @@ Rails.application.routes.draw do
   # Now your users can be seen at /users/username
   # devise_for :users, :path_prefix => 'd'
   # resources :users, :only =>[:show]
-
-  get '/users', to: 'users#index'
-  get '/user/:id', to: 'users#show', :as => 'user_profile'
+#----------------------------users
+  get '/users', to: 'admin#index'
+  get '/user/:id', to: 'admin#show', :as => 'user_profile'
+  get '/admin', to: 'admin#admin_dashboard', :as => 'dash'
   resources :users,only: [:index] do
     member do
       resources :followings,only: [:create, :destroy]
     end
   end
-  
-  get '/search' => 'pages#search', :as => 'search_page'
-  # get '/search', to: 'pages#search'
+  #resources :relationships,       only: [:create, :destroy]
+
 
   devise_for :users
   #, controllers: { confirmations: 'confirmations' }
@@ -35,10 +35,20 @@ Rails.application.routes.draw do
     resources :comments #nested thing
     resources :likes
   end
-  
-  root "posts#index"
-  
+
+  resources :tags , except: [:show]
+  # get 'tags', to: 'tags#index'
+  # get 'tags/:id/edit/', to: 'tags#edit', as: 'tag_edit'
+  # get 'tags/new'
+  # get 'tags/:id/delete', to: 'tags#delete'
   # this will create a crud function for post
-  # you can check "rails routes" after or before it 
-  
+  # you can check "rails routes" after or before it
+  # add this line to link tags to posts with the respective tag
+  #
+  get '/search' => 'pages#search', :as => 'search_page'
+  # get '/search', to: 'pages#search'
+  get 'tags/:tag', to: 'posts#index', as: :thistag
+  root "posts#index"
+
+
 end

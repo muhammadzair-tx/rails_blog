@@ -1,13 +1,17 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  validates_uniqueness_of :username, :email
+
+  # mount_uploader :avatar, AvatarUploader
+
+  validates_uniqueness_of :username, :email #, if: :title_changed?
   validates_confirmation_of :password
   has_many :posts
   has_many :likes, dependent: :destroy
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable
-        #  :confirmable
+         :recoverable, :rememberable, :validatable
+         #:confirmable #through emails
+  #https://accounts.google.com/DisplayUnlockCaptcha this is the solution for allow server to access this email
   #------------------------------------------------------------------------------------------------
   # Will return an array of follows for the given user instance
   has_many :received_follows, foreign_key: :followed_user_id, class_name: "Relationship"
@@ -35,4 +39,7 @@ class User < ApplicationRecord
     #pre_like = @post.likes.find { |like| like.user_id == current_user.id}
     Relationship.where(follower_id: self.id, followed_user_id: other_user).exists?
   end
+  # def is_self_follow?(other_user)
+  #   return true if other_user.id == self.id
+  # end
 end

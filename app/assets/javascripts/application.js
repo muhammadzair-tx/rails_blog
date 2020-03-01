@@ -22,7 +22,7 @@
 //= require summernote-init
 // require activestorage
 
-
+//= require chosen-jquery
 
 //= require rails.validations
 //= require rails.validations.simple_form
@@ -33,4 +33,23 @@
 
 $('[data-provider="summernote"]').each(function(){
     $(this).summernote({ });
-})
+});
+
+function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#blah')
+                .attr('src', e.target.result);
+        };
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+$(document).on('turbolinks:load', function () {
+    $('#post_tag_ids').chosen({
+        allow_single_deselect: true,
+        width: '100%'
+    })
+});
